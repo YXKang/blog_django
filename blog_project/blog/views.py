@@ -23,12 +23,20 @@ def global_setting(request):
     # 广告数据
     ad_list = Ad.objects.all()
     # 标签云
-    # 友情链接
-    # 文章排行榜
+    tag_cloud_list = Tag.objects.all()
+    # 推荐排行
+    article_recommend_list = Article.objects.filter(is_recommend=True)
+    # 浏览排行
+    article_click_list = Article.objects.order_by('-click_count')
     # 评论排行
     comment_count_list = Comment.objects.values('article').annotate(comment_count=Count('article')).order_by('-comment_count')
     article_comment_list = [Article.objects.get(pk=comment['article']) for comment in comment_count_list]
+
+
     return {
+            "tag_cloud_list": tag_cloud_list,
+            "article_recommend_list": article_recommend_list,
+            "article_click_list": article_click_list,
             "article_comment_list": article_comment_list,
             "category_list": category_list,
             "archive_list": archive_list,
@@ -85,6 +93,7 @@ def article(request):
                                     'article': id} if request.user.is_authenticated() else{'article': id})
         # 获取评论信息
         comments = Comment.objects.filter(article=article).order_by('id')
+        comments_num = len(comments)
         comment_list = []
         for comment in comments:
             for item in comment_list:
@@ -109,7 +118,7 @@ def comment_post(request):
             #获取表单信息
             comment = Comment.objects.create(username=comment_form.cleaned_data["author"],
                                              email=comment_form.cleaned_data["email"],
-                                             url=comment_form.cleaned_data["url"],
+                                             # url=comment_form.cleaned_data["url"],
                                              content=comment_form.cleaned_data["comment"],
                                              article_id=comment_form.cleaned_data["article"],
                                              user=request.user if request.user.is_authenticated() else None)
@@ -196,4 +205,17 @@ def category(request):
         logger.error(e)
     return render(request, 'blog/category.html', locals())
 
+
+def tag_cloud(request):
+    # 获取用户提交的信息
+    try:
+        tid = request.GET.get('tid', None)
+        try:
+            tag = Tag.objects.get(pk=tid)
+        except Tag.DoesNotExist:
+            return render(request, 'blog/failure.html', {'reason': '标签不存在'})
+        article_list = tag.article_set.all()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'blog/tag.html', locals())
 

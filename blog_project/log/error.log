@@ -11,3 +11,7 @@
 2018-05-08 11:00:52,615 [Thread-91:140244238202624] [blog.views:47] [views:archive] [ERROR]- That page contains no results
 2018-05-08 11:04:04,975 [Thread-95:140244238202624] [blog.views:47] [views:archive] [ERROR]- That page contains no results
 2018-05-08 13:32:46,413 [Thread-3:140564146157312] [blog.views:97] [views:article] [ERROR]- failure.html
+2018-05-11 14:40:37,425 [Thread-9:139642699745024] [blog.views:121] [views:comment_post] [ERROR]- failure.html
+2018-05-11 14:40:50,161 [Thread-11:139642699745024] [blog.views:121] [views:comment_post] [ERROR]- failure.html
+2018-05-11 14:42:05,723 [Thread-22:139642473019136] [blog.views:121] [views:comment_post] [ERROR]- failure.html
+2018-05-11 14:47:11,829 [Thread-47:139642456233728] [blog.views:121] [views:comment_post] [ERROR]- failure.html

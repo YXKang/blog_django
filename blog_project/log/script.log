@@ -1029,3 +1029,85 @@ Traceback (most recent call last):
 TemplateDoesNotExist: reg.html
 2018-05-08 16:59:07,471 [Thread-122:140236243855104] [django.request:170] [base:get_response] [WARNING]- Not Found: /article/index.html
 2018-05-08 16:59:17,323 [Thread-124:140236243855104] [django.request:170] [base:get_response] [WARNING]- Not Found: /article/index.html
+2018-05-09 14:45:25,402 [Thread-3:140245881038592] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2018-05-09 14:45:27,596 [Thread-4:140245872645888] [django.request:170] [base:get_response] [WARNING]- Not Found: /index.html
+2018-05-09 14:46:04,338 [Thread-23:140245872645888] [django.request:170] [base:get_response] [WARNING]- Not Found: /portal.php
+2018-05-09 16:21:47,343 [Thread-3:140018811135744] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2018-05-11 10:58:48,894 [Thread-3:140717332338432] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2018-05-11 13:24:30,203 [Thread-4:140649815631616] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2018-05-11 14:14:24,674 [Thread-4:139689968346880] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2018-05-11 14:18:23,182 [Thread-46:139689943168768] [django.request:170] [base:get_response] [WARNING]- Not Found: /article/article/
+2018-05-11 15:00:19,911 [Thread-28:140329466459904] [django.request:170] [base:get_response] [WARNING]- Not Found: /article/index.html
+2018-05-11 15:46:03,048 [Thread-4:140462249629440] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2018-05-11 16:16:04,869 [Thread-2:140560626624256] [django.request:170] [base:get_response] [WARNING]- Not Found: /index.html
+2018-05-11 16:29:17,471 [Thread-32:140560245450496] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/1
+2018-05-11 16:32:13,835 [Thread-39:140560600921856] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /category/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/PycharmProjects/blog_project/blog/views.py", line 205, in category
+    return render(request, 'blog/category.html', locals())
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 113, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 110, in get_parent
+    return context.template.engine.get_template(parent)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/engine.py", line 146, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: base.html
+2018-05-11 16:33:28,889 [Thread-44:140560617707264] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /category/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/PycharmProjects/blog_project/blog/views.py", line 205, in category
+    return render(request, 'blog/category.html', locals())
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 151, in render
+    template = context.template.engine.get_template(template)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/home/python/.virtualenvs/blog-django/local/lib/python2.7/site-packages/django/template/engine.py", line 146, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: ad.html

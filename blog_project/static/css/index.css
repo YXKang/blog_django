@@ -32,8 +32,8 @@
 .tit01 h3 { line-height: 40px; color: #38485A; font-size: 18px; border-bottom: 1px solid #E6E6E6; height: 40px }
 /* 关注我样式 */
 .gzwm ul { width: 100%; margin: 30px 0; overflow: hidden }
-.gzwm li { width: 52px; margin: 0 18px 0 5px; float: left; }
-.gzwm li a { color: #747F8C; width: 52px; text-align: center; padding-top: 60px; float: left; }
+/*.gzwm li { width: 60px; height:60px; float: left; }*/
+.gzwm li a { color: #0066FF; font-size:18px; width: 60px; height:60px; margin-left: 5px; text-align: center; float: left; }
 .gzwm .rss { background: url(../images/ico_04_1.jpg) no-repeat scroll 0% 0% transparent; }
 .gzwm .rss:hover { color: #000; background: url(../images/ico_04.png) no-repeat scroll 0% 0% transparent; }
 .gzwm .xlwb { background: url(../images/ico_05_1.jpg) no-repeat scroll 0% 0% transparent; }

@@ -26,7 +26,7 @@
         Address:  <a href="{{ SITE_URL }}article/?id={{ article.id }}" rel="bookmark" title="{{ article.title }}">{{ SITE_URL }}article/?id={{ article.id }}</a>
         </div>
 
-      <div class="commentstitle"><h3 id="comments"><span class="commentsnumber">only 1 comment</span> untill now</h3></div>
+      <div class="commentstitle"><h3 id="comments"><span class="commentsnumber">{{ comments_num }} comment</span> untill now</h3></div>
 
       <ol class="commentlist">
           {% for comment in comment_list %}
@@ -67,8 +67,8 @@
     <p>{{ comment_form.email }}
     <label for="email">Email (Will NOT be published) (required)</label></p>
 
-    <p>{{ comment_form.url }}
-    <label for="url">URL</label></p>
+{#    <p>{{ comment_form.url }}#}
+{#    <label for="url">URL</label></p>#}
 
 
     <!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code class=&quot;&quot; title=&quot;&quot; data-url=&quot;&quot;&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; &lt;pre class=&quot;&quot; title=&quot;&quot; data-url=&quot;&quot;&gt; &lt;span class=&quot;&quot; title=&quot;&quot; data-url=&quot;&quot;&gt; </small></p>-->
