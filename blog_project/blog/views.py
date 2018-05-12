@@ -83,6 +83,8 @@ def article(request):
         try:
             # 获取文章信息
             article = Article.objects.get(pk=id)
+            article.click_count = long(int(article.click_count)+1)
+            article.save()
         except Article.DoesNotExist:
             return render(request, 'blog/failure.html', {'reason': '没有找到对应的文章'})
 
@@ -108,6 +110,7 @@ def article(request):
         print e
         logger.error(e)
     return render(request, 'blog/article.html', locals())
+
 
 
 # 提交评论
